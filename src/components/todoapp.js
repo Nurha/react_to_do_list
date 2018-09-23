@@ -30,6 +30,12 @@ export default class ToDoApp extends Component {
         })
     }
 
+    delete_list = () => {
+        this.setState({
+            list_items: []
+        })
+    }
+
     render() {
         return (
             <div>
@@ -44,6 +50,11 @@ export default class ToDoApp extends Component {
                     <br />
                     <button>Add to list</button>
                     <TodoList list_items={this.state.list_items}/>
+                    {
+                        this.state.list_items.length > 0 ?
+                        <button onClick={this.delete_list}>Delete List</button>:
+                        null
+                    }
               </form>
             </div>
         )
