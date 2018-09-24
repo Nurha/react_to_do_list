@@ -36,6 +36,12 @@ export default class ToDoApp extends Component {
         })
     }
 
+    delete_list_item = (index, e) => {
+        const list_items = Object.assign([], this.state.list_items);
+        list_items.splice(index, 1);
+        this.setState({ list_items: list_items})
+    }
+
     render() {
         return (
             <div>
@@ -49,7 +55,7 @@ export default class ToDoApp extends Component {
                     <br />
                     <br />
                     <button>Add to list</button>
-                    <TodoList list_items={this.state.list_items}/>
+                    <TodoList list_items={this.state.list_items} deleteItem={this.delete_list_item.bind(this)}/>
                     {
                         this.state.list_items.length > 0 ?
                         <button onClick={this.delete_list}>Delete List</button>:
