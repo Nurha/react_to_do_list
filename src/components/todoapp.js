@@ -36,9 +36,9 @@ export default class ToDoApp extends Component {
         })
     }
 
-    delete_list_item = (index, e) => {
+    delete_list_item = (id) => {
         const list_items = Object.assign([], this.state.list_items);
-        list_items.splice(index, 1);
+        list_items.splice(id, 1);
         this.setState({ list_items: list_items})
     }
 
