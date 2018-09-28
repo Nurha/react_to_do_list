@@ -6,7 +6,7 @@ export default class NavBar extends Component {
         return (
             <div>
                 <AppBar 
-                    title='Menu'
+                    
                 />
             </div>
         )
