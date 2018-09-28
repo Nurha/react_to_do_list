@@ -9,7 +9,7 @@ import NavBar from './components/navbar';
 export default class App extends Component {
   render() {
     return (
-      <MuiThemeProvider>
+      <MuiThemeProvider >
       <Router>
         <div>
           <Route exact path='*' component={NavBar}/>
